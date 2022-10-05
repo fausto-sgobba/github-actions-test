@@ -3,7 +3,7 @@ name: Create issue on commit
 on: 
   push:
     branches:
-      - nonexisting
+      - nonexistingbranch
 
 jobs:
   create_issue:
