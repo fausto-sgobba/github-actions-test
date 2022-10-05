@@ -3,7 +3,7 @@ name: Random File
 on: 
   push:
     branches:
-      - develop
+      - nonexistentbranch
 
 jobs:
   update-random-txt:
