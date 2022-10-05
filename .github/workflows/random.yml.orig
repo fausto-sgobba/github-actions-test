@@ -2,8 +2,11 @@ name: Random File
 
 on: 
   push:
+<<<<<<< HEAD
+=======
     branches:
       - main
+>>>>>>> main
 
 jobs:
   update-random-txt:
