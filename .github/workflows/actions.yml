@@ -5,8 +5,8 @@ on:
     branches:
       - develop
 env:
-  TEST_SECRET: ${{ secrets.TEST_SECRET}}
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
+  TEST_SECRET: ${{ secrets.TEST_SECRET }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   # pull_request:
   #   types: [closed,  assigned, opened, reopened]
   # https://crontab.guru/
@@ -19,6 +19,7 @@ jobs:
    steps:
      - name: Print secret
        run: |
+         echo ${{secrets}}
          echo "TEST_SECRET: ${TEST_SECRET}"
          echo "GITHUB_TOKEN: ${GITHUB_TOKEN}"
      - name: List Files
