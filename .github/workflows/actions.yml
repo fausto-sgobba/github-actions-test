@@ -3,7 +3,7 @@ name: Actions Workflow
 on: 
   push:
     branches:
-      - develop
+      - nonexistent
 env:
   TEST_SECRET: ${{ secrets.TEST_SECRET }}
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
