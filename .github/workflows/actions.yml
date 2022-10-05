@@ -3,8 +3,10 @@ name: Actions Workflow
 on: 
   push:
     branches:
-      - master
-      - main
+      - develop
+env:
+  TEST_SECRET: ${{ secrets.TEST_SECRET}}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
   # pull_request:
   #   types: [closed,  assigned, opened, reopened]
   # https://crontab.guru/
@@ -15,6 +17,10 @@ jobs:
   run-github-actions:
    runs-on: ubuntu-latest
    steps:
+     - name: Print secret
+       run: |
+         echo "TEST_SECRET: ${TEST_SECRET}"
+         echo "GITHUB_TOKEN: ${GITHUB_TOKEN}"
      - name: List Files
        run: |
          echo $GITHUB_SHA
