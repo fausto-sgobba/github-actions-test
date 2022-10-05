@@ -3,7 +3,7 @@ name: Random File
 on: 
   push:
     branches:
-      - main
+      - develop
 
 jobs:
   update-random-txt:
