@@ -2,8 +2,14 @@ name: Actions Workflow
 
 on: 
   push:
-  pull_request:
-    types: [closed,  assigned, opened, reopened]
+    branches:
+      - master
+      - main
+  # pull_request:
+  #   types: [closed,  assigned, opened, reopened]
+  # https://crontab.guru/
+  # schedule: 
+  #   - cron: "* * * * *"
 
 jobs:
   run-github-actions:
