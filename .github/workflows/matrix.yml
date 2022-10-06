@@ -9,6 +9,7 @@ jobs:
       matrix: 
         node-version: [6,8,10]
       fail-fast: true
+      max-parallel: 0
     steps:
       - name: Log node version
         run: node -v
